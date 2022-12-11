@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap");
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -19,6 +20,72 @@ body {
 img, picture, svg, video {
   display: block;
   max-width: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Quicksand", sans-serif;
+  background-color: #333;
+}
+body .tictactoe {
+  width: 90vw;
+  margin: 0 auto;
+  text-align: center;
+}
+body .tictactoe h1 {
+  font-size: 3rem;
+  color: #ff4040;
+}
+body .tictactoe h2 {
+  font-size: 2rem;
+}
+body .tictactoe .table {
+  margin: 4rem auto;
+  display: grid;
+  grid-template: "1 2 3" "4 5 6" "7 8 9";
+  justify-content: center;
+  align-items: center;
+}
+body .tictactoe .table .cell {
+  width: 5rem;
+  height: 5rem;
+  line-height: var(--size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 2px #fff;
+  border-right: solid 2px #fff;
+  font-size: 4rem;
+  cursor: pointer;
+}
+body .tictactoe .table .cell:nth-child(3n+3) {
+  border-right: none;
+}
+body .tictactoe .table .cell:nth-last-child(-n+3) {
+  border-bottom: none;
+}
+body .tictactoe .table .x {
+  color: #ff4040;
+}
+body .tictactoe .table .o {
+  color: #088da5;
+}
+body .tictactoe .restart-btn {
+  text-decoration: none;
+  color: #ff4040;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 2rem;
+  border: 2px solid #ff4040;
+  padding: 1rem;
+  transition: color 0.2s ease, background 0.2s ease, border 0.2s ease;
+}
+body .tictactoe .restart-btn:hover, body .tictactoe .restart-btn:focus {
+  color: #333;
+  background-color: #ff4040;
+  border: none;
 }
 
 /*# sourceMappingURL=style.css.map */

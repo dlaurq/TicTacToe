@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap');
+
+$bgClr:#333;
+$Xclr: #ff4040;
+$Oclr: #088da5;
+
+
 *,*::before,*::after{
     box-sizing: border-box;
 }
@@ -21,3 +28,86 @@ img,picture,svg,video{
     max-width: 100%;
 }
 
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+    background-color: $bgClr;
+
+    .tictactoe{
+        width: 90vw;
+        margin: 0 auto;
+        text-align: center;
+
+        h1{
+            font-size: 3rem;
+            color: $Xclr;
+        }
+
+        h2{
+            font-size: 2rem;
+        }
+
+        .table{
+            margin: 4rem auto;
+            display: grid;
+            grid-template: 
+                "1 2 3"
+                "4 5 6"
+                "7 8 9";
+            //gap: .5rem;
+            justify-content: center;
+            align-items: center;
+
+            .cell{
+                $size: 5rem;
+                width: $size;
+                height: $size;
+                line-height: var(--size);
+                //background-color: red;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-bottom: solid 2px #fff;
+                border-right: solid 2px #fff;;
+                font-size: 4rem;
+                cursor: pointer;
+                
+                &:nth-child(3n+3){
+                    border-right: none;
+                }
+
+                &:nth-last-child(-n+3){
+                    border-bottom: none;
+                }
+            }
+
+            .x{
+                color: $Xclr;
+            }
+            .o{
+                color: $Oclr;
+            }
+        }
+
+        .restart-btn{
+            
+            text-decoration: none;
+            color: $Xclr;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 2rem;
+            border: 2px solid $Xclr;
+            padding: 1rem;
+            transition: color .2s ease, background .2s ease, border .2s ease;
+
+            &:hover,&:focus{
+                color: $bgClr;
+                background-color: $Xclr;
+                border: none;
+            }
+        }
+    }
+}
