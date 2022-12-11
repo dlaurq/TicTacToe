@@ -36,7 +36,12 @@ body .tictactoe {
 }
 body .tictactoe h1 {
   font-size: 3rem;
+}
+body .tictactoe .winner-x {
   color: #ff4040;
+}
+body .tictactoe .winner-o {
+  color: #088da5;
 }
 body .tictactoe h2 {
   font-size: 2rem;
@@ -66,10 +71,10 @@ body .tictactoe .table .cell:nth-child(3n+3) {
 body .tictactoe .table .cell:nth-last-child(-n+3) {
   border-bottom: none;
 }
-body .tictactoe .table .x {
+body .tictactoe .table .X {
   color: #ff4040;
 }
-body .tictactoe .table .o {
+body .tictactoe .table .O {
   color: #088da5;
 }
 body .tictactoe .restart-btn {
@@ -86,6 +91,15 @@ body .tictactoe .restart-btn:hover, body .tictactoe .restart-btn:focus {
   color: #333;
   background-color: #ff4040;
   border: none;
+}
+body .hidden-btn {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  cursor: pointer;
+}
+body .hide {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

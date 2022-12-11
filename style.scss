@@ -43,7 +43,14 @@ body{
 
         h1{
             font-size: 3rem;
+        }
+
+        .winner-x{
             color: $Xclr;
+        }
+
+        .winner-o{
+            color: $Oclr;
         }
 
         h2{
@@ -84,10 +91,10 @@ body{
                 }
             }
 
-            .x{
+            .X{
                 color: $Xclr;
             }
-            .o{
+            .O{
                 color: $Oclr;
             }
         }
@@ -110,4 +117,16 @@ body{
             }
         }
     }
+
+    .hidden-btn{
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        cursor: pointer;
+    }
+
+    .hide{
+        display: none;
+    }
+
 }
