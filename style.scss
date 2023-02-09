@@ -45,20 +45,31 @@ body{
             font-size: 3rem;
         }
 
-        .winner-x{
+        .winner-x, .x{
             color: $Xclr;
         }
 
-        .winner-o{
+        .winner-o, .o{
             color: $Oclr;
         }
-
-        h2{
+        .score{
+            width: 30vw;
+            margin: 0 auto;
+            margin-top: .5rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
             font-size: 2rem;
+        }
+        .msg-box{
+            font-size: 1.5rem;
+            height: 1.2rem;
+            padding: 1rem;
         }
 
         .table{
-            margin: 4rem auto;
+            margin: 2.5rem auto;
             display: grid;
             grid-template: 
                 "1 2 3"
@@ -107,7 +118,7 @@ body{
             font-weight: 500;
             font-size: 2rem;
             border: 2px solid $Xclr;
-            padding: 1rem;
+            padding: .8rem;
             transition: color .2s ease, background .2s ease, border .2s ease;
 
             &:hover,&:focus{

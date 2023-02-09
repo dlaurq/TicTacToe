@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap");
 *, *::before, *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 * {
@@ -23,60 +24,111 @@ img, picture, svg, video {
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Quicksand", sans-serif;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Quicksand', sans-serif;
   background-color: #333;
 }
+
 body .tictactoe {
   width: 90vw;
   margin: 0 auto;
   text-align: center;
 }
+
 body .tictactoe h1 {
   font-size: 3rem;
 }
-body .tictactoe .winner-x {
+
+body .tictactoe .winner-x, body .tictactoe .x {
   color: #ff4040;
 }
-body .tictactoe .winner-o {
+
+body .tictactoe .winner-o, body .tictactoe .o {
   color: #088da5;
 }
-body .tictactoe h2 {
+
+body .tictactoe .score {
+  width: 30vw;
+  margin: 0 auto;
+  margin-top: .5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 2rem;
 }
-body .tictactoe .table {
-  margin: 4rem auto;
-  display: grid;
-  grid-template: "1 2 3" "4 5 6" "7 8 9";
-  justify-content: center;
-  align-items: center;
+
+body .tictactoe .msg-box {
+  font-size: 1.5rem;
+  height: 1.2rem;
+  padding: 1rem;
 }
+
+body .tictactoe .table {
+  margin: 2.5rem auto;
+  display: -ms-grid;
+  display: grid;
+  grid-template: "1 2 3" "4 5 6" "7 8 9";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 body .tictactoe .table .cell {
   width: 5rem;
   height: 5rem;
   line-height: var(--size);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-bottom: solid 2px #fff;
   border-right: solid 2px #fff;
   font-size: 4rem;
   cursor: pointer;
 }
+
 body .tictactoe .table .cell:nth-child(3n+3) {
   border-right: none;
 }
+
 body .tictactoe .table .cell:nth-last-child(-n+3) {
   border-bottom: none;
 }
+
 body .tictactoe .table .X {
   color: #ff4040;
 }
+
 body .tictactoe .table .O {
   color: #088da5;
 }
+
 body .tictactoe .restart-btn {
   text-decoration: none;
   color: #ff4040;
@@ -84,22 +136,25 @@ body .tictactoe .restart-btn {
   font-weight: 500;
   font-size: 2rem;
   border: 2px solid #ff4040;
-  padding: 1rem;
-  transition: color 0.2s ease, background 0.2s ease, border 0.2s ease;
+  padding: .8rem;
+  -webkit-transition: color .2s ease, background .2s ease, border .2s ease;
+  transition: color .2s ease, background .2s ease, border .2s ease;
 }
+
 body .tictactoe .restart-btn:hover, body .tictactoe .restart-btn:focus {
   color: #333;
   background-color: #ff4040;
   border: none;
 }
+
 body .hidden-btn {
   width: 100vw;
   height: 100vh;
   position: absolute;
   cursor: pointer;
 }
+
 body .hide {
   display: none;
 }
-
 /*# sourceMappingURL=style.css.map */
